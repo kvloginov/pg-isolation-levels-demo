@@ -1,0 +1,24 @@
+.DS_Store
+.git/
+vendor/
+# Common backup files
+*.swp
+*.bak
+*.tmp
+*~
+# Various IDEs
+.project
+.idea/
+*.tmproj
+.vscode/
+deployments/helm/telesales-engine/Chart.lock
+deployments/helm/telesales-engine/charts/
+.bin
+.task
+.cover
+go.work
+go.work.sum
+Chart.lock
+charts
+var/
+*.secret.*

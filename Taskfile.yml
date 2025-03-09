@@ -1,0 +1,8 @@
+version: "3"
+
+tasks:
+  env-up:
+    desc: "setup local infrastructure"
+    cmds:
+      - docker-compose -f environment/docker-compose.yaml up -d
+      - task: migrate
