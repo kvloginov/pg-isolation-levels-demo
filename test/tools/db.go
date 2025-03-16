@@ -9,6 +9,10 @@ import (
 	"github.com/kvloginov/pg-isolation-levels-demo/internal/infra/pg"
 )
 
+func IsPostgresql() bool {
+	return true
+}
+
 func MigrateTestDB(t *testing.T, db *sqlx.DB) {
 	_, err := db.Exec(`
 		CREATE TABLE IF NOT EXISTS wallets (
