@@ -17,7 +17,11 @@ func MigrateTestDB(t *testing.T, db *sqlx.DB) {
 		);
 	`)
 	require.NoError(t, err, "create test table")
+}
 
+func DropTestDB(t *testing.T, db *sqlx.DB) {
+	_, err := db.Exec("DROP TABLE IF EXISTS wallets;")
+	require.NoError(t, err, "drop test table")
 }
 
 func ConnectToDB(t *testing.T) *sqlx.DB {

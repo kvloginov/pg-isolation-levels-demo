@@ -13,6 +13,7 @@ import (
 func TestOne(t *testing.T) {
 	db := tools.ConnectToDB(t)
 	ctx := context.Background()
+	tools.DropTestDB(t, db)
 	tools.MigrateTestDB(t, db)
 
 	tx, err := db.BeginTx(ctx, &sql.TxOptions{Isolation: sql.LevelDefault})
